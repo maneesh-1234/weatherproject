@@ -21,7 +21,7 @@
                  <div class="tempInformation">
                     <div class="top_layer">
                         <p id="day">Tuesday</p>
-                        <p id="today_data">13 OCT</p>
+                        <p id="today_data">15 June</p>
                     </div>
                     <div class="main_layer">
                         <p id="city_name">Get Output Here</p>
@@ -61,12 +61,12 @@
             day.innerText = days;
         };
 
-         const getCurrentTime = () => {
+        const getCurrentTime = () => {
             var months = [
                "January",
                "February",
                "March",
-               "April", 
+               "April",
                "May",
                "June",
                "July",
@@ -79,7 +79,7 @@
 
             var now = new Date();
             var month = months[now.getMonth()];
-
+            
             var date = now.getDate();
 
             let hours = now.getHours();
@@ -98,10 +98,12 @@
                 mins = "0" + mins;
             }
 
-            //console.log(month + "/" + date);
-            return `${month} ${date} | ${hours}:${mins}${periods}`;
-        }; 
-        
+            
+            document.getElementById("today_data").innerText = `${month} ${date} | ${hours}:${mins}${periods}`;
+            
+            
+        };
+
         curDate.innerHTML = getCurrentDay() + " | " + getCurrentTime();
    </script>
 </body>

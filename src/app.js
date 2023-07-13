@@ -38,3 +38,6 @@ app.get("*", (req,res) => {
 app.listen(port, () => {
     console.log(`listening to the port at ${port}`);
 });
+
+
+//  "start" : "node src/app.js"
